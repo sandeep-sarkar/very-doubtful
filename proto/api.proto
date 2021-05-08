@@ -9,6 +9,9 @@ service StatisticsCalculator{
 
 message CalculateStatisticsRequest {
 	Document document = 1;
+	repeated string columnsExclude = 2;
+	repeated string columnsInclude = 3;
+	string primaryColumn = 4;
 }
 
 message CalculateStatisticsResponse {
@@ -17,9 +20,4 @@ message CalculateStatisticsResponse {
 
 message Document {
 	bytes content = 1;
-	DocumentSource source = 2;
-}
-
-message DocumentSource {
-	string http_uri = 1;
 }

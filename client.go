@@ -31,6 +31,7 @@ func main() {
 		Document: &pb.Document{
 			Content: document,
 		},
+		ColumnsExclude: []string{"aaa", "bbb"},
 	})
 
 	ioutil.WriteFile("out.csv", resp.GetContent(), 0644)
