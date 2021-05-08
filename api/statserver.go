@@ -4,14 +4,14 @@ import (
 	"context"
 	"fmt"
 
-	api "github.com/very-doubtful/proto"
+	api "github.com/very-doubtful/proto/calcstatisticsb"
 )
 
-type StatServer struct {
-	api.UnimplementedCalculateStatisticsServer
+type Server struct {
+	api.UnimplementedStatisticsCalculatorServer
 }
 
-func (s *StatServer) CalculateStatistics(
+func (s *Server) CalculateStatistics(
 	ctx context.Context,
 	req *api.CalculateStatisticsRequest,
 ) (*api.CalculateStatisticsResponse, error) {

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/very-doubtful/proto";
+option go_package = "github.com/very-doubtful/proto/calcstatisticsb";
 package calcstatistics;
 
 service StatisticsCalculator{

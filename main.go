@@ -6,7 +6,7 @@ import (
 
 	"github.com/very-doubtful/api"
 
-	pb "github.com/very-doubtful/proto"
+	pb "github.com/very-doubtful/proto/calcstatisticsb"
 
 	"google.golang.org/grpc"
 )
@@ -23,7 +23,7 @@ func main() {
 	}
 
 	grpcServer := grpc.NewServer()
-	statServer := api.StatServer{}
+	statServer := &api.Server{}
 	pb.RegisterStatisticsCalculatorServer(grpcServer, statServer)
 
 	if err := grpcServer.Serve(lis); err != nil {
