@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "github.com/very-doubtful/proto";
+package calcstatistics;
+
+service StatisticsCalculator{
+	rpc CalculateStatistics (CalculateStatisticsRequest) returns (CalculateStatisticsResponse) {}
+}
+
+message CalculateStatisticsRequest {
+	Document document = 1;
+}
+
+message CalculateStatisticsResponse {
+	bytes content  = 1;
+}
+
+message Document {
+	bytes content = 1;
+	DocumentSource source = 2;
+}
+
+message DocumentSource {
+	string http_uri = 1;
+}
