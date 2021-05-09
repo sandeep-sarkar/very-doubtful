@@ -6,6 +6,8 @@ import (
 	"net/http"
 
 	"github.com/very-doubtful/api"
+	health "github.com/very-doubtful/health"
+	api_health "google.golang.org/grpc/health/grpc_health_v1"
 
 	pb "github.com/very-doubtful/proto/calcstatisticsb"
 
@@ -34,6 +36,11 @@ func main() {
 	go fileServer(":50071")
 
 	grpcServer := grpc.NewServer()
+
+	//health server
+	healthServ := health.NewHealthCheckService()
+	api_health.RegisterHealthServer(grpcServer, healthServ)
+
 	statServer := &api.Server{}
 	pb.RegisterStatisticsCalculatorServer(grpcServer, statServer)
 
