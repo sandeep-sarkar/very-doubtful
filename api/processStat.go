@@ -32,18 +32,21 @@ type StatCalculator struct {
 	Document       []byte
 	ColumnsExclude []string
 	ColumnsInclude []string
+	Headers        []string
+	IdMap          map[string]ColStat
 }
 
 func (s *StatCalculator) calculateStatistics() (string, error) {
 
 	reader := csv.NewReader(bytes.NewBuffer(s.Document))
-	_, err := reader.Read()
+	var err error
+	s.Headers, err = reader.Read()
 	if err != nil {
 		log.Fatalf("Error in reading csv %v", err)
 		return "", err
 	}
 
-	idMap := make(map[string]ColStat)
+	s.IdMap = make(map[string]ColStat)
 
 	for {
 		record, err := reader.Read()
@@ -55,11 +58,11 @@ func (s *StatCalculator) calculateStatistics() (string, error) {
 			return "", err
 		}
 		companyId := record[1]
-		colStat, ok := idMap[companyId]
+		colStat, ok := s.IdMap[companyId]
 		if ok == false {
 			colStat = ColStat{}
 			colStat.init()
-			idMap[companyId] = colStat
+			s.IdMap[companyId] = colStat
 		}
 		colStat.bankEntryDate[record[2]] += 1
 		colStat.bankEntryText[record[3]] += 1
@@ -68,16 +71,62 @@ func (s *StatCalculator) calculateStatistics() (string, error) {
 		colStat.accountNumber[record[6]] += 1
 		colStat.accountTypeName[record[7]] += 1
 	}
-
-	output := s.printStatistics(idMap)
+	//exclude and include Columns
+	s.excludeColumns()
+	s.includeColumns()
+	output := s.printStatistics()
 	return output, nil
 }
 
-func (s *StatCalculator) printStatistics(idMap map[string]ColStat) string {
+func (s *StatCalculator) excludeColumns() {
+	for companyId, colStat := range s.IdMap {
+		for i := 0; i < len(s.ColumnsExclude); i++ {
+			log.Printf("Excluding column %s", s.ColumnsExclude[i])
+			switch s.ColumnsExclude[i] {
+			case "BankEntryDate":
+				colStat.bankEntryDate = nil
+			case "BankEntryText":
+				colStat.bankEntryText = nil
+			case "BankEntryAmount":
+				colStat.bankEntryAmount = nil
+			case "AccountName":
+				colStat.accountName = nil
+			case "AccountNumber":
+				colStat.accountNumber = nil
+			case "AccountTypeName":
+				colStat.accountTypeName = nil
+			}
+		}
+		s.IdMap[companyId] = colStat
+	}
+}
+
+func (s *StatCalculator) includeColumns() {
+	if len(s.ColumnsInclude) == 0 {
+		return
+	}
+
+	s.ColumnsExclude = nil
+
+	for _, header := range s.Headers {
+		excludeHeader := true
+		for _, columnInclude := range s.ColumnsInclude {
+			if header == columnInclude {
+				excludeHeader = false
+			}
+		}
+		if excludeHeader == true {
+			s.ColumnsExclude = append(s.ColumnsExclude, header)
+		}
+	}
+	s.excludeColumns()
+}
+
+func (s *StatCalculator) printStatistics() string {
 	var outString string
 	outString = fmt.Sprintf(",CompanyId,ColumnName,ColumnValue,Count\n")
 	count := 0
-	for companyId, colStat := range idMap {
+	for companyId, colStat := range s.IdMap {
 		for key, val := range colStat.bankEntryDate {
 			tempString := fmt.Sprintf("%d,%s,BankEntryDate,%s,%d\n", count, companyId, key, val)
 			outString = outString + tempString
@@ -116,5 +165,6 @@ func (s *StatCalculator) printStatistics(idMap map[string]ColStat) string {
 	t := time.Now()
 	fileName := "result-" + t.Format("0102200615040500000") + ".csv"
 	ioutil.WriteFile("result/"+fileName, []byte(outString), 0644)
+	log.Printf("Result saved in result/%s", fileName)
 	return "result/" + fileName
 }
