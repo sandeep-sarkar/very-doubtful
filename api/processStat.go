@@ -5,7 +5,9 @@ import (
 	"encoding/csv"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
+	"time"
 )
 
 type ColStat struct {
@@ -33,7 +35,7 @@ type StatCalculator struct {
 	PrimaryColumn  string
 }
 
-func (s *StatCalculator) calculateStatistics() ([]byte, error) {
+func (s *StatCalculator) calculateStatistics() (string, error) {
 
 	if len(s.PrimaryColumn) == 0 {
 		s.PrimaryColumn = "CompanyId"
@@ -43,7 +45,7 @@ func (s *StatCalculator) calculateStatistics() ([]byte, error) {
 	_, err := reader.Read()
 	if err != nil {
 		log.Fatalf("Error in reading csv %v", err)
-		return nil, err
+		return "", err
 	}
 
 	idMap := make(map[string]ColStat)
@@ -55,7 +57,7 @@ func (s *StatCalculator) calculateStatistics() ([]byte, error) {
 		}
 		if err != nil {
 			log.Fatalf("Error in reading csv row by row: %v", err)
-			return nil, err
+			return "", err
 		}
 		companyId := record[1]
 		colStat, ok := idMap[companyId]
@@ -77,7 +79,7 @@ func (s *StatCalculator) calculateStatistics() ([]byte, error) {
 	return output, nil
 }
 
-func (s *StatCalculator) printStatistics(idMap map[string]ColStat) []byte {
+func (s *StatCalculator) printStatistics(idMap map[string]ColStat) string {
 	var outString string
 	outString = fmt.Sprintf(",CompanyId,ColumnName,ColumnValue,Count\n")
 	count := 0
@@ -117,5 +119,8 @@ func (s *StatCalculator) printStatistics(idMap map[string]ColStat) []byte {
 			count++
 		}
 	}
-	return []byte(outString)
+	t := time.Now()
+	fileName := "result-" + t.Format("0102200615040500000") + ".csv"
+	ioutil.WriteFile("result/"+fileName, []byte(outString), 0644)
+	return "result/" + fileName
 }

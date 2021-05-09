@@ -15,9 +15,13 @@ message CalculateStatisticsRequest {
 }
 
 message CalculateStatisticsResponse {
-	bytes content  = 1;
+	DocumentSource documentSource = 1;
 }
 
 message Document {
 	bytes content = 1;
+}
+
+message DocumentSource {
+	string httpUri = 1;
 }

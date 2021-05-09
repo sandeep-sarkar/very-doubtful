@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"io/ioutil"
 	"log"
 
@@ -31,8 +32,9 @@ func main() {
 		Document: &pb.Document{
 			Content: document,
 		},
-		ColumnsExclude: []string{"aaa", "bbb"},
+		ColumnsExclude: []string{"AccountName", "AccountType"},
 	})
 
-	ioutil.WriteFile("out.csv", resp.GetContent(), 0644)
+	//ioutil.WriteFile("out.csv", resp.GetContent(), 0644)
+	fmt.Println(resp.GetDocumentSource())
 }

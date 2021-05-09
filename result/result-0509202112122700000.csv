@@ -1,0 +1,148 @@
+,CompanyId,ColumnName,ColumnValue,Count
+0,int:a055470,BankEntryDate,2016-02-23,5
+1,int:a055470,BankEntryDate,2016-02-22,5
+2,int:a055470,BankEntryDate,2016-02-19,9
+3,int:a055470,BankEntryDate,2016-02-25,5
+4,int:a055470,BankEntryDate,2016-02-11,6
+5,int:a055470,BankEntryDate,2016-02-08,12
+6,int:a055470,BankEntryDate,2016-02-15,5
+7,int:a055470,BankEntryDate,2016-02-26,1
+8,int:a055470,BankEntryDate,2016-02-24,4
+9,int:a055470,BankEntryDate,2016-02-16,7
+10,int:a055470,BankEntryDate,2016-02-10,9
+11,int:a055470,BankEntryDate,2016-02-09,13
+12,int:a055470,BankEntryDate,2016-02-05,1
+13,int:a055470,BankEntryDate,2016-02-29,7
+14,int:a055470,BankEntryDate,2016-02-18,7
+15,int:a055470,BankEntryDate,2016-02-17,4
+16,int:a055470,BankEntryText,str:1e0c71f str:572e6b4,1
+17,int:a055470,BankEntryText,str:bafa491 str:e518328 str:c5d9be1,1
+18,int:a055470,BankEntryText,str:58455a8 str:5ad9e74 int:7b3ce63 str:3c509f3,2
+19,int:a055470,BankEntryText,str:811d1d5 str:5ad9e74 str:a67fb86 str:5865174,1
+20,int:a055470,BankEntryText,str:3602da6 str:5ad9e74 int:7b3ce63 str:3c509f3,1
+21,int:a055470,BankEntryText,str:c7ba15f str:f2db7aa str:2598b78 str:c4957d2,1
+22,int:a055470,BankEntryText,str:bafa491 str:6e81fd5 str:74c905f str:d5fbb51 str:fa06fd6,1
+23,int:a055470,BankEntryText,str:4f2111c str:b1e909e,2
+24,int:a055470,BankEntryText,str:19425d7 str:2178a18 str:9286ab3 str:ab6915e,1
+25,int:a055470,BankEntryText,str:bafa491 str:6e81fd5 str:74c905f str:9dcebc9 str:7b1b641,1
+26,int:a055470,BankEntryText,str:dd1a39f,1
+27,int:a055470,BankEntryText,str:8c4cbc7 str:4ea6493 str:d899b83 str:a4f2b0c,1
+28,int:a055470,BankEntryText,str:bafa491 str:e590fe4,1
+29,int:a055470,BankEntryText,str:bafa491 str:7ee9bc1 str:2fddb6b,1
+30,int:a055470,BankEntryText,str:c7ba15f str:f2db7aa str:4987b8b,1
+31,int:a055470,BankEntryText,str:c704d91 str:1b0ad3b str:2598b78 str:070dddb,1
+32,int:a055470,BankEntryText,str:bafa491 str:7ee9bc1 str:442676a,2
+33,int:a055470,BankEntryText,str:bafa491 str:7ee9bc1 str:086034e str:a4f2b0c,1
+34,int:a055470,BankEntryText,str:c13d99c str:8515a2b str:fc7f3d2,1
+35,int:a055470,BankEntryText,str:2e0447a str:41a0557 str:9286ab3 str:ccee691 str:feebd77,2
+36,int:a055470,BankEntryText,str:9c5dcdc str:40b356a str:ef6b883,1
+37,int:a055470,BankEntryText,str:f1ddb30 str:5ad9e74 int:7b3ce63 str:3c509f3,1
+38,int:a055470,BankEntryText,str:a8fdd98 int:2dc6b2d str:f8c47d1,1
+39,int:a055470,BankEntryText,str:a60ce88 str:2908e18,2
+40,int:a055470,BankEntryText,str:a022c3c str:1b2928e str:cd972e2,1
+41,int:a055470,BankEntryText,str:a8fdd98 int:79f4f9a str:97e0d38 str:0467b73 str:38490d0 str:49774c7,1
+42,int:a055470,BankEntryText,str:88d7a3b str:5dd5a33,2
+43,int:a055470,BankEntryText,str:74c905f str:5d1f84b int:6184feb,6
+44,int:a055470,BankEntryText,str:ba99ace str:1db4275 str:4f2111c,2
+45,int:a055470,BankEntryText,str:b95f1d0 str:4ea6493 str:d899b83 str:a4f2b0c,1
+46,int:a055470,BankEntryText,str:edf6aaf str:69f2789 str:8b771ed,1
+47,int:a055470,BankEntryText,str:74c905f str:5d1f84b int:4effaba,1
+48,int:a055470,BankEntryText,str:c7ba15f str:f2db7aa str:0e0c63c,1
+49,int:a055470,BankEntryText,str:9eba9ae str:4ea6493 str:d899b83 str:a4f2b0c,1
+50,int:a055470,BankEntryText,str:c44d783 str:42882fa str:4f2111c,2
+51,int:a055470,BankEntryText,str:a8fdd98 int:11ef6cc str:e43898a str:4f2111c,1
+52,int:a055470,BankEntryText,str:0840b70 str:5ad9e74 int:7b3ce63 str:9f1d1fc,1
+53,int:a055470,BankEntryText,str:c704d91 str:6e81fd5 str:2ef2852 str:576bfe1 str:b73dc62,1
+54,int:a055470,BankEntryText,str:a8fdd98 int:28a909c str:c42c120 str:4f2111c,1
+55,int:a055470,BankEntryText,str:a8fdd98 int:9a93494 str:fd9632a,1
+56,int:a055470,BankEntryText,str:387ba5c str:5ca3356 str:acc1554,1
+57,int:a055470,BankEntryText,str:76d5d12 str:12077f2,1
+58,int:a055470,BankEntryText,str:c7ba15f str:f2db7aa str:7d2a292,1
+59,int:a055470,BankEntryText,str:4a8c1ac str:1b2928e str:cd972e2,1
+60,int:a055470,BankEntryText,str:241d767 str:b1e909e,1
+61,int:a055470,BankEntryText,str:c7ba15f str:f2db7aa str:0ca11b1 str:5e60e75,1
+62,int:a055470,BankEntryText,str:959748e str:38af8e2,1
+63,int:a055470,BankEntryText,str:a8fdd98 int:95289d8 str:ae9b0da,1
+64,int:a055470,BankEntryText,str:a8fdd98 int:6d9bca5 str:b84eec4 str:fc66e15,1
+65,int:a055470,BankEntryText,str:a8fdd98 int:64d3480 str:3bf68c8 str:19581f2 str:1d24072,1
+66,int:a055470,BankEntryText,str:a48dab9 str:572e6b4,1
+67,int:a055470,BankEntryText,str:c704d91 str:6e81fd5 str:ceb0f29 str:5e60e75 str:b73dc62,1
+68,int:a055470,BankEntryText,str:bafa491 str:b91af60 str:3d84928 str:e183a51,1
+69,int:a055470,BankEntryText,str:bafa491 str:6e81fd5 str:74c905f str:d05356e str:04bc7bb,1
+70,int:a055470,BankEntryText,str:74c905f str:5d1f84b int:1b8efba,1
+71,int:a055470,BankEntryText,str:c327d58 str:e43898a str:4f2111c,1
+72,int:a055470,BankEntryText,str:673418b str:5ad9e74 int:7b3ce63 str:3bf68c8,1
+73,int:a055470,BankEntryText,str:bdbcdb0,1
+74,int:a055470,BankEntryText,str:1634259 str:5ca3356 str:acc1554,2
+75,int:a055470,BankEntryText,str:a8fdd98 int:064c7dc str:e43898a str:4f2111c,2
+76,int:a055470,BankEntryText,str:5027fed str:40b356a str:ef6b883,1
+77,int:a055470,BankEntryText,str:a8fdd98 int:5a35099 str:8e00a42 str:32ab43f str:4f2111c,1
+78,int:a055470,BankEntryText,str:c7f4667 str:71ed1b1 str:9286ab3 int:54ebda2,1
+79,int:a055470,BankEntryText,str:a8fdd98 int:13609cf str:1331318 str:4f2111c int:acc63b9,1
+80,int:a055470,BankEntryText,str:bafa491 str:442676a str:bcdf5a4,1
+81,int:a055470,BankEntryText,str:a8fdd98 int:2e023bc str:4f28ada str:966462a str:73b1943,1
+82,int:a055470,BankEntryText,str:7e3d767 str:d51a552 str:1a42e0f str:04c209f,1
+83,int:a055470,BankEntryText,str:6372cf6 str:5ad9e74 int:7b3ce63 str:21b55a7,1
+84,int:a055470,BankEntryText,str:65453a1 str:5ad9e74 str:a67fb86 str:384a6a5,1
+85,int:a055470,BankEntryText,str:c7ba15f str:f2db7aa str:9dcebc9 str:18cd8d5,1
+86,int:a055470,BankEntryText,str:38248d2,2
+87,int:a055470,BankEntryText,str:dac9043,1
+88,int:a055470,BankEntryText,str:c26756c str:12077f2,1
+89,int:a055470,BankEntryText,str:bafa491 str:7ee9bc1 str:086034e str:55922e2,1
+90,int:a055470,BankEntryText,str:803b210 str:6e81fd5 str:d55f672 str:6114078 str:52ec755,1
+91,int:a055470,BankEntryText,str:803b210 str:6e81fd5 str:74c905f str:6859b88 str:fa06fd6,1
+92,int:a055470,BankEntryText,str:6cd08e4 int:49fed34,2
+93,int:a055470,BankEntryText,str:590be0f str:d4cc763,1
+94,int:a055470,BankEntryText,str:3ed536d str:5ad9e74 int:7b3ce63,1
+95,int:a055470,BankEntryText,str:a8fdd98 int:bac110b str:3bf68c8 str:47125c1,1
+96,int:a055470,BankEntryText,str:c7ba15f str:f2db7aa str:402615b,1
+97,int:a055470,BankEntryText,str:bafa491 str:f2db7aa str:e401dd5 str:a4f2b0c,1
+98,int:a055470,BankEntryText,str:2de8ad7 str:f8b5e46,1
+99,int:a055470,BankEntryAmount,> -1000,34
+100,int:a055470,BankEntryAmount,> -100,29
+101,int:a055470,BankEntryAmount,> -10000,22
+102,int:a055470,BankEntryAmount,< 10000,3
+103,int:a055470,BankEntryAmount,big negative,7
+104,int:a055470,BankEntryAmount,big positive,1
+105,int:a055470,BankEntryAmount,> -10,2
+106,int:a055470,BankEntryAmount,< 1000,2
+107,int:a055470,AccountName,str:2f85016,4
+108,int:a055470,AccountName,str:3bdde00,3
+109,int:a055470,AccountName,str:40e42a9,1
+110,int:a055470,AccountName,str:481e4e8,6
+111,int:a055470,AccountName,str:ab162f3,2
+112,int:a055470,AccountName,str:1e82557,9
+113,int:a055470,AccountName,str:9ce853c,1
+114,int:a055470,AccountName,str:a9f0788,29
+115,int:a055470,AccountName,str:a67d2b5,8
+116,int:a055470,AccountName,str:892c3fd,5
+117,int:a055470,AccountName,str:7ee6cec,4
+118,int:a055470,AccountName,str:dc7a2b9,1
+119,int:a055470,AccountName,str:74a08e1,1
+120,int:a055470,AccountName,str:cc78807,8
+121,int:a055470,AccountName,str:34f9644,1
+122,int:a055470,AccountName,str:65a86dc,3
+123,int:a055470,AccountName,str:ea57e55,4
+124,int:a055470,AccountName,str:17ed048,9
+125,int:a055470,AccountName,str:f53d4ec,1
+126,int:a055470,AccountNumber,3430,1
+127,int:a055470,AccountNumber,3600,1
+128,int:a055470,AccountNumber,3115,1
+129,int:a055470,AccountNumber,2270,8
+130,int:a055470,AccountNumber,3604,4
+131,int:a055470,AccountNumber,3617,9
+132,int:a055470,AccountNumber,3145,1
+133,int:a055470,AccountNumber,6922,4
+134,int:a055470,AccountNumber,9900,9
+135,int:a055470,AccountNumber,2240,29
+136,int:a055470,AccountNumber,3628,3
+137,int:a055470,AccountNumber,2291,4
+138,int:a055470,AccountNumber,5660,8
+139,int:a055470,AccountNumber,6920,3
+140,int:a055470,AccountNumber,2239,5
+141,int:a055470,AccountNumber,5670,1
+142,int:a055470,AccountNumber,2770,6
+143,int:a055470,AccountNumber,1310,2
+144,int:a055470,AccountNumber,2754,1
+145,int:a055470,AccountTypeName,Balance,25
+146,int:a055470,AccountTypeName,Profit and Loss,75

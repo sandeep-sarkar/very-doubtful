@@ -2,9 +2,11 @@ package api
 
 import (
 	"context"
+	"errors"
 	"log"
 
 	api "github.com/very-doubtful/proto/calcstatisticsb"
+	"google.golang.org/grpc/peer"
 )
 
 type Server struct {
@@ -25,10 +27,20 @@ func (s *Server) CalculateStatistics(
 		PrimaryColumn:  req.GetPrimaryColumn(),
 	}
 
-	content, err := sc.calculateStatistics()
+	documentSource, err := sc.calculateStatistics()
 	if err != nil {
-		content = []byte("Error in processing document")
+		return nil, errors.New("Error in processing document")
 	}
+
+	peer, _ := peer.FromContext(ctx)
+
+	log.Printf("Served request to %s", peer.Addr.String())
+
+	return &api.CalculateStatisticsResponse{
+		DocumentSource: &api.DocumentSource{
+			HttpUri: documentSource,
+		},
+	}, nil
 
 	/**
 	return &api.CalculateStatisticsResponse{
@@ -36,7 +48,4 @@ func (s *Server) CalculateStatistics(
 	}, nil
 	**/
 
-	return &api.CalculateStatisticsResponse{
-		Content: content,
-	}, nil
 }
