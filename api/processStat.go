@@ -166,5 +166,5 @@ func (s *StatCalculator) printStatistics() string {
 	fileName := "result-" + t.Format("0102200615040500000") + ".csv"
 	ioutil.WriteFile("result/"+fileName, []byte(outString), 0644)
 	log.Printf("Result saved in result/%s", fileName)
-	return "result/" + fileName
+	return fileName
 }
