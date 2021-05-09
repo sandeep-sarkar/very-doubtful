@@ -32,7 +32,8 @@ func main() {
 		Document: &pb.Document{
 			Content: document,
 		},
-		ColumnsExclude: []string{"AccountName", "AccountTypeName"},
+		//ColumnsExclude: []string{"AccountName", "AccountTypeName"},
+		//ColumnsInclude: []string{"AccountName", "AccountTypeName"},
 	})
 
 	//ioutil.WriteFile("out.csv", resp.GetContent(), 0644)

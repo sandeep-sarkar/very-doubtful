@@ -1,0 +1,22 @@
+,CompanyId,ColumnName,ColumnValue,Count
+0,int:a055470,AccountName,str:65a86dc,3
+1,int:a055470,AccountName,str:ea57e55,4
+2,int:a055470,AccountName,str:40e42a9,1
+3,int:a055470,AccountName,str:cc78807,8
+4,int:a055470,AccountName,str:481e4e8,6
+5,int:a055470,AccountName,str:dc7a2b9,1
+6,int:a055470,AccountName,str:34f9644,1
+7,int:a055470,AccountName,str:a9f0788,29
+8,int:a055470,AccountName,str:74a08e1,1
+9,int:a055470,AccountName,str:ab162f3,2
+10,int:a055470,AccountName,str:7ee6cec,4
+11,int:a055470,AccountName,str:3bdde00,3
+12,int:a055470,AccountName,str:9ce853c,1
+13,int:a055470,AccountName,str:a67d2b5,8
+14,int:a055470,AccountName,str:2f85016,4
+15,int:a055470,AccountName,str:f53d4ec,1
+16,int:a055470,AccountName,str:1e82557,9
+17,int:a055470,AccountName,str:17ed048,9
+18,int:a055470,AccountName,str:892c3fd,5
+19,int:a055470,AccountTypeName,Profit and Loss,75
+20,int:a055470,AccountTypeName,Balance,25
