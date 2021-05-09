@@ -40,7 +40,7 @@ spec:
       terminationGracePeriodSeconds: 60
       containers:
         - name: stat-processing
-          image: gcr.io/sandeep-sarkar/stat-processing:v1.1
+          image: docker.io/sansark1/stat-processing:v1.1
           imagePullPolicy: Always
           args: []
           ports:
