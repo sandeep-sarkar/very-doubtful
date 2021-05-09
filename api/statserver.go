@@ -2,7 +2,7 @@ package api
 
 import (
 	"context"
-	"fmt"
+	"log"
 
 	api "github.com/very-doubtful/proto/calcstatisticsb"
 )
@@ -15,8 +15,8 @@ func (s *Server) CalculateStatistics(
 	ctx context.Context,
 	req *api.CalculateStatisticsRequest,
 ) (*api.CalculateStatisticsResponse, error) {
-	fmt.Println("Received document...")
-	fmt.Println(req.Document.GetContent())
+	log.Printf("Received document...")
+	log.Printf("Processing document")
 
 	sc := StatCalculator{
 		Document:       req.Document.GetContent(),
@@ -25,10 +25,18 @@ func (s *Server) CalculateStatistics(
 		PrimaryColumn:  req.GetPrimaryColumn(),
 	}
 
-	sc.printDocument()
-	fmt.Println("Columns excluded", sc.ColumnsExclude)
+	content, err := sc.calculateStatistics()
+	if err != nil {
+		content = []byte("Error in processing document")
+	}
 
+	/**
 	return &api.CalculateStatisticsResponse{
 		Content: req.Document.GetContent(),
+	}, nil
+	**/
+
+	return &api.CalculateStatisticsResponse{
+		Content: content,
 	}, nil
 }
