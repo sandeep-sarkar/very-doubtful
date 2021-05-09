@@ -24,7 +24,6 @@ func (s *Server) CalculateStatistics(
 		Document:       req.Document.GetContent(),
 		ColumnsExclude: req.GetColumnsExclude(),
 		ColumnsInclude: req.GetColumnsInclude(),
-		PrimaryColumn:  req.GetPrimaryColumn(),
 	}
 
 	documentSource, err := sc.calculateStatistics()
@@ -41,11 +40,4 @@ func (s *Server) CalculateStatistics(
 			HttpUri: documentSource,
 		},
 	}, nil
-
-	/**
-	return &api.CalculateStatisticsResponse{
-		Content: req.Document.GetContent(),
-	}, nil
-	**/
-
 }

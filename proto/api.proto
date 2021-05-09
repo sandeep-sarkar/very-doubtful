@@ -11,7 +11,6 @@ message CalculateStatisticsRequest {
 	Document document = 1;
 	repeated string columnsExclude = 2;
 	repeated string columnsInclude = 3;
-	string primaryColumn = 4;
 }
 
 message CalculateStatisticsResponse {

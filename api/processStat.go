@@ -32,14 +32,9 @@ type StatCalculator struct {
 	Document       []byte
 	ColumnsExclude []string
 	ColumnsInclude []string
-	PrimaryColumn  string
 }
 
 func (s *StatCalculator) calculateStatistics() (string, error) {
-
-	if len(s.PrimaryColumn) == 0 {
-		s.PrimaryColumn = "CompanyId"
-	}
 
 	reader := csv.NewReader(bytes.NewBuffer(s.Document))
 	_, err := reader.Read()
@@ -74,7 +69,6 @@ func (s *StatCalculator) calculateStatistics() (string, error) {
 		colStat.accountTypeName[record[7]] += 1
 	}
 
-	//convert the result into bytes
 	output := s.printStatistics(idMap)
 	return output, nil
 }
