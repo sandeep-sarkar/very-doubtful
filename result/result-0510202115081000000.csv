@@ -1,0 +1,65 @@
+,CompanyId,ColumnName,ColumnValue,Count
+0,int:a055470,BankEntryDate,2016-02-25,5
+1,int:a055470,BankEntryDate,2016-02-19,9
+2,int:a055470,BankEntryDate,2016-02-15,5
+3,int:a055470,BankEntryDate,2016-02-09,13
+4,int:a055470,BankEntryDate,2016-02-05,1
+5,int:a055470,BankEntryDate,2016-02-29,7
+6,int:a055470,BankEntryDate,2016-02-24,4
+7,int:a055470,BankEntryDate,2016-02-22,5
+8,int:a055470,BankEntryDate,2016-02-26,1
+9,int:a055470,BankEntryDate,2016-02-17,4
+10,int:a055470,BankEntryDate,2016-02-10,9
+11,int:a055470,BankEntryDate,2016-02-08,12
+12,int:a055470,BankEntryDate,2016-02-23,5
+13,int:a055470,BankEntryDate,2016-02-16,7
+14,int:a055470,BankEntryDate,2016-02-11,6
+15,int:a055470,BankEntryDate,2016-02-18,7
+16,int:a055470,BankEntryAmount,> -1000,34
+17,int:a055470,BankEntryAmount,> -100,29
+18,int:a055470,BankEntryAmount,> -10000,22
+19,int:a055470,BankEntryAmount,< 10000,3
+20,int:a055470,BankEntryAmount,big negative,7
+21,int:a055470,BankEntryAmount,big positive,1
+22,int:a055470,BankEntryAmount,> -10,2
+23,int:a055470,BankEntryAmount,< 1000,2
+24,int:a055470,AccountName,str:1e82557,9
+25,int:a055470,AccountName,str:a67d2b5,8
+26,int:a055470,AccountName,str:892c3fd,5
+27,int:a055470,AccountName,str:40e42a9,1
+28,int:a055470,AccountName,str:481e4e8,6
+29,int:a055470,AccountName,str:3bdde00,3
+30,int:a055470,AccountName,str:a9f0788,29
+31,int:a055470,AccountName,str:ea57e55,4
+32,int:a055470,AccountName,str:cc78807,8
+33,int:a055470,AccountName,str:ab162f3,2
+34,int:a055470,AccountName,str:17ed048,9
+35,int:a055470,AccountName,str:74a08e1,1
+36,int:a055470,AccountName,str:65a86dc,3
+37,int:a055470,AccountName,str:7ee6cec,4
+38,int:a055470,AccountName,str:dc7a2b9,1
+39,int:a055470,AccountName,str:9ce853c,1
+40,int:a055470,AccountName,str:2f85016,4
+41,int:a055470,AccountName,str:34f9644,1
+42,int:a055470,AccountName,str:f53d4ec,1
+43,int:a055470,AccountNumber,2240,29
+44,int:a055470,AccountNumber,5660,8
+45,int:a055470,AccountNumber,1310,2
+46,int:a055470,AccountNumber,3617,9
+47,int:a055470,AccountNumber,2270,8
+48,int:a055470,AccountNumber,2770,6
+49,int:a055470,AccountNumber,6922,4
+50,int:a055470,AccountNumber,3145,1
+51,int:a055470,AccountNumber,9900,9
+52,int:a055470,AccountNumber,2291,4
+53,int:a055470,AccountNumber,2754,1
+54,int:a055470,AccountNumber,3430,1
+55,int:a055470,AccountNumber,3604,4
+56,int:a055470,AccountNumber,6920,3
+57,int:a055470,AccountNumber,3600,1
+58,int:a055470,AccountNumber,3115,1
+59,int:a055470,AccountNumber,2239,5
+60,int:a055470,AccountNumber,3628,3
+61,int:a055470,AccountNumber,5670,1
+62,int:a055470,AccountTypeName,Balance,25
+63,int:a055470,AccountTypeName,Profit and Loss,75

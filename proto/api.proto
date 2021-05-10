@@ -11,6 +11,7 @@ message CalculateStatisticsRequest {
 	Document document = 1;
 	repeated string columnsExclude = 2;
 	repeated string columnsInclude = 3;
+	float maxVariation = 4;
 }
 
 message CalculateStatisticsResponse {

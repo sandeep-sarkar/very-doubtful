@@ -34,6 +34,7 @@ func main() {
 		},
 		//ColumnsExclude: []string{"AccountName", "AccountTypeName"},
 		//ColumnsInclude: []string{"AccountName", "AccountTypeName"},
+		MaxVariation: 0.6,
 	})
 
 	//ioutil.WriteFile("out.csv", resp.GetContent(), 0644)

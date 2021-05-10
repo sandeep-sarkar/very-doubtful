@@ -24,6 +24,7 @@ func (s *Server) CalculateStatistics(
 		Document:       req.Document.GetContent(),
 		ColumnsExclude: req.GetColumnsExclude(),
 		ColumnsInclude: req.GetColumnsInclude(),
+		MaxVariation:   req.GetMaxVariation(),
 	}
 
 	documentSource, err := sc.calculateStatistics()

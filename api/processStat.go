@@ -33,6 +33,7 @@ type StatCalculator struct {
 	ColumnsExclude []string
 	ColumnsInclude []string
 	Headers        []string
+	MaxVariation   float32
 	IdMap          map[string]ColStat
 }
 
@@ -74,11 +75,16 @@ func (s *StatCalculator) calculateStatistics() (string, error) {
 	//exclude and include Columns
 	s.excludeColumns()
 	s.includeColumns()
+	s.removeMaxVariationColumns()
 	output := s.printStatistics()
 	return output, nil
 }
 
 func (s *StatCalculator) excludeColumns() {
+	if len(s.ColumnsExclude) == 0 {
+		return
+	}
+
 	for companyId, colStat := range s.IdMap {
 		for i := 0; i < len(s.ColumnsExclude); i++ {
 			log.Printf("Excluding column %s", s.ColumnsExclude[i])
@@ -120,6 +126,44 @@ func (s *StatCalculator) includeColumns() {
 		}
 	}
 	s.excludeColumns()
+}
+
+func (s *StatCalculator) calculateMeanInverse(col map[string]int) float32 {
+	sum := 0
+	for _, colVal := range col {
+		sum += colVal
+	}
+	mean := float32(len(col)) / float32(sum)
+	return mean
+}
+
+func (s *StatCalculator) removeMaxVariationColumns() {
+
+	if s.MaxVariation == 0 {
+		s.MaxVariation = 0.5
+	}
+	for companyId, colStat := range s.IdMap {
+
+		if s.calculateMeanInverse(colStat.bankEntryAmount) > s.MaxVariation {
+			colStat.bankEntryAmount = nil
+		}
+		if s.calculateMeanInverse(colStat.bankEntryText) > s.MaxVariation {
+			colStat.bankEntryText = nil
+		}
+		if s.calculateMeanInverse(colStat.bankEntryDate) > s.MaxVariation {
+			colStat.bankEntryDate = nil
+		}
+		if s.calculateMeanInverse(colStat.accountName) > s.MaxVariation {
+			colStat.accountName = nil
+		}
+		if s.calculateMeanInverse(colStat.accountNumber) > s.MaxVariation {
+			colStat.accountNumber = nil
+		}
+		if s.calculateMeanInverse(colStat.accountTypeName) > s.MaxVariation {
+			colStat.accountTypeName = nil
+		}
+		s.IdMap[companyId] = colStat
+	}
 }
 
 func (s *StatCalculator) printStatistics() string {

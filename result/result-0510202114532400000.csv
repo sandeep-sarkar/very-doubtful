@@ -1,0 +1,3 @@
+,CompanyId,ColumnName,ColumnValue,Count
+0,int:a055470,AccountTypeName,Balance,25
+1,int:a055470,AccountTypeName,Profit and Loss,75
