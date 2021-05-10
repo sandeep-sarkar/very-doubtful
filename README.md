@@ -15,7 +15,7 @@ curl -GET localhost:50071/result-0510202112325200000.csv
 To build this project following prerequisites need to be met:
 
 - go 1.10 and above
-- go grpc installed from here https://grpc.io/docs/languages/go/quickstart/
+- gRPC installed from here https://grpc.io/docs/languages/go/quickstart/
 - docker and kubernetes (optional)
 
 ## Build process
